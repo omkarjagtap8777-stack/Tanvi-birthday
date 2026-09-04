@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Happy Birthday ❤️</title>
+<style>
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Georgia,serif;background:#fff7fb;color:#54233f}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:30px;position:relative;overflow:hidden;background:radial-gradient(circle at 20% 20%,#ffd6e8,transparent 35%),radial-gradient(circle at 80% 70%,#e3d5ff,transparent 35%),#fff7fb}
+.card{max-width:900px;padding:65px 42px;background:#ffffffcc;border:1px solid #fff;border-radius:30px;box-shadow:0 20px 60px #7b426425;backdrop-filter:blur(8px)}
+h1{font-size:clamp(52px,10vw,100px);margin:10px 0;color:#9d356d}.sub{font-size:26px;line-height:1.7}
+button{border:0;border-radius:999px;padding:15px 25px;background:#9d356d;color:white;font-size:16px;cursor:pointer;margin-top:18px}
+section{padding:110px 28px;max-width:1150px;margin:auto;text-align:center}h2{font-size:46px;margin-top:0}.message{font-size:24px;line-height:1.9;background:white;padding:30px;border-radius:24px;box-shadow:0 12px 35px #7b426418}
+.gallery{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px}.photo{height:280px;border-radius:20px;background:linear-gradient(135deg,#ffd2e5,#ddd0ff);display:flex;align-items:center;justify-content:center;color:#7d4764;font-size:18px}
+.timeline{display:grid;gap:15px}.moment{background:white;padding:22px;border-radius:18px;text-align:left;box-shadow:0 8px 25px #7b426414}.moment b{color:#9d356d}
+footer{text-align:center;padding:60px 20px;font-size:18px}
+.heart{position:absolute;animation:float 7s linear infinite;opacity:.5;font-size:28px}
+@keyframes float{from{transform:translateY(110vh) rotate(0)}to{transform:translateY(-15vh) rotate(360deg)}}
+</style>
+</head>
+<body>
+<div class="hero">
+  <div class="heart" style="left:8%;animation-delay:0s">♥</div><div class="heart" style="left:30%;animation-delay:2s">♡</div>
+  <div class="heart" style="left:65%;animation-delay:1s">♥</div><div class="heart" style="left:88%;animation-delay:3s">♡</div>
+  <div class="card">
+    <div style="font-size:50px">🎂✨</div>
+    <h1>Happy Birthday,<br>Tanvi ❤️</h1>
+    <p class="sub">Today is all about celebrating the beautiful person you are, Tanvi. 💕</p>
+    <button onclick="document.getElementById('surprise').scrollIntoView()">Start the Surprise ✨</button>
+  </div>
+</div>
+
+<section id="surprise">
+<h2>A Little Message For You 💌</h2>
+<div class="message">
+  Happy Birthday! ❤️<br><br>
+  I hope your day is filled with happiness, laughter, beautiful moments,
+  and everything that makes you smile. You deserve an amazing year ahead.
+  Keep shining, keep smiling, and never forget how special you are. ✨<br><br>
+  <strong>Happy Birthday once again! 🎂💕</strong>
+</div>
+</section>
+
+<section>
+<h2>Questions For Tanvi 💕</h2>
+<div class="message">
+  <p><strong>💗 Do you know how special you are to me?</strong></p>
+  <button onclick="answer(this,'Of course you are! ❤️')">Tap for answer</button>
+  <p><strong>✨ What is my favorite thing about you?</strong></p>
+  <button onclick="answer(this,'Your smile, your kindness, and simply being you. 🥰')">Reveal</button>
+  <p><strong>🌙 If I could make one birthday wish for you?</strong></p>
+  <button onclick="answer(this,'That you always have reasons to smile and feel loved. 💖')">My wish</button>
+  <p><strong>🎀 One question for you, Tanvi: will you keep smiling like this?</strong></p>
+  <button onclick="answer(this,'That smile is too precious to lose! 😄❤️')">Answer</button>
+</div>
+</section>
+
+<section>
+<h2>Little Love Notes 💌</h2>
+<div class="gallery">
+  <div class="message">🌸 You make ordinary moments feel special.</div>
+  <div class="message">✨ Your smile can make a bad day feel better.</div>
+  <div class="message">💗 You deserve all the happiness in the world.</div>
+  <div class="message">🎂 Today is your day, so please smile extra.</div>
+  <div class="message">🌙 Wherever life takes us, this memory is yours.</div>
+  <div class="message">🥰 Never forget how wonderfully unique you are.</div>
+</div>
+</section>
+
+<section>
+<h2>A Tiny Promise 💞</h2>
+<div class="message">
+  I can't promise that every day will be perfect, but I can promise that
+  your birthday deserves to be remembered with a big smile. Keep being
+  the amazing Tanvi you are. ❤️
+</div>
+</section>
+
+
+
+
+
+<section>
+<h2>Before You Go... 🥹</h2>
+<div class="message">
+  <strong>Tanvi,</strong><br><br>
+  If this little website made you smile even once, then it did its job. 💕
+  Happy Birthday to someone who deserves a day as lovely as she is.
+  <br><br>🎂 ❤️ ✨
+</div>
+</section>
+
+<footer>
+  Made especially for Tanvi ❤️<br><br>
+  <button onclick="celebrate()">One More Surprise 🎉</button>
+</footer>
+
+<script>
+function answer(btn,text){
+  btn.nextElementSibling && (btn.nextElementSibling.textContent=text);
+  btn.textContent='❤️';
+  btn.disabled=true;
+}
+function celebrate(){
+  for(let i=0;i<35;i++){
+    const s=document.createElement('span');s.textContent=['❤️','✨','💖','🎉'][i%4];
+    s.style.position='fixed';s.style.left=Math.random()*100+'vw';s.style.top='50vh';
+    s.style.fontSize=(15+Math.random()*25)+'px';s.style.zIndex=99;
+    s.style.transition='transform 1.8s,opacity 1.8s';
+    document.body.appendChild(s);
+    requestAnimationFrame(()=>{s.style.transform=`translate(${(Math.random()-.5)*500}px,${(Math.random()-.5)*700}px) rotate(${Math.random()*500}deg)`;s.style.opacity=0});
+    setTimeout(()=>s.remove(),1900);
+  }
+}
+</script>
+</body>
+</html>
